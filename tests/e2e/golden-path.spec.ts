@@ -67,7 +67,9 @@ test("golden path: queue → source → ARR correction → staged approval → u
     page.getByRole("button", { name: "Approve correction & next" }),
   ).toBeDisabled();
   began = performance.now();
-  await page.getByLabel("Standard metric", { exact: true }).selectOption("ARR");
+  await page
+    .getByRole("combobox", { name: "Standard metric", exact: true })
+    .selectOption("ARR");
   await expect(page.locator(".notice.success")).toContainText(
     "Correction preview: ARR · As of Jun 30, 2026",
   );

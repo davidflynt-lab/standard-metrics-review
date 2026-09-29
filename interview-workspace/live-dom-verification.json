@@ -1,0 +1,22 @@
+{
+  "url": "https://standard-metrics-review.vercel.app/",
+  "checkedAt": "2026-09-29T00:13:11.503Z",
+  "method": "Live HTML and deployed JavaScript executed in JSDOM; no screenshots or visual layout verification",
+  "checks": [
+    "Queue: 48 total, five filters and six HarborCloud rows",
+    "Inspection and grounding: page 8, three evidence tokens, mapping warning and normalization",
+    "Reclassification: green preview, as-of period and locked June 30 date",
+    "Staging: Approved 1, approved ARR row, Undo and independent $1.2M GAAP Revenue",
+    "Undo restores original classification and counters",
+    "Bulk acceptance excludes all unresolved records; true source conflict stays blocked",
+    "Production CSS declares the 58/42 split; geometry not visually verified"
+  ],
+  "timingsMs": {
+    "queueHydration": 555,
+    "inspection": 23,
+    "reclassification": 5,
+    "staging": 23
+  },
+  "runtimeErrors": [],
+  "result": "PASS"
+}
