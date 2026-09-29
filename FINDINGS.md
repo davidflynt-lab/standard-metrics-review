@@ -2,6 +2,10 @@
 
 Production: https://standard-metrics-review.vercel.app
 
+Repository: https://github.com/davidflynt-lab/standard-metrics-review
+
+**Production Chromium verification: PASS (2/2 tests).** [Verified GitHub Actions run](https://github.com/davidflynt-lab/standard-metrics-review/actions/runs/36502620954). No screenshots, video or trace capture. Full test evidence: `verification/production-playwright.json`.
+
 ## Verified outcomes
 
 - Public production URL returns HTTP 200 without a sign-in gate. Vercel production build is READY; TypeScript compilation and strict lint pass.
@@ -15,11 +19,11 @@ Production: https://standard-metrics-review.vercel.app
 
 ## Latency notes
 
-One live JSDOM sample: queue fetch + client hydration 555 ms; opening review 23 ms; correction preview 5 ms; staging 23 ms. A separate public HTTP fetch took 308 ms. These are environment-specific observations, not browser paint measurements or a performance benchmark.
+One production Chromium sample from the Linux CI runner: queue load 774 ms; opening review 62 ms; correction preview 20 ms; staging 49 ms. The golden-path test completed in 1.058 seconds and the edge-case test in 0.848 seconds. A separate public HTTP fetch took 308 ms. These are environment-specific observations, not paint metrics, percentile estimates or a performance benchmark. The supplemental live JSDOM sample hydrated in 555 ms.
 
 ## Verification limits
 
-Local Playwright could not launch Chromium because the macOS execution sandbox rejected Mach process registration; neither browser test reached application assertions locally. The live JSDOM check verifies interactions but does not render CSS geometry. A GitHub Actions production browser run is being prepared. No screenshots, videos or traces were captured.
+Local Playwright could not launch Chromium because the macOS execution sandbox rejected Mach process registration. Both browser tests subsequently passed on GitHub Actions against the production URL, including the 58/42 pane dimensions at a 1440px viewport. The first remote attempt exposed an exact-label test lookup issue; using the correctly named combobox role resolved it. No application runtime or console errors were recorded in the passing golden-path run. Visual appearance and the native Figma import helper have not been reviewed in an editor or screenshots.
 
 ## Discussion points for Justin
 

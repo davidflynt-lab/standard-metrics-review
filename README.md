@@ -39,6 +39,10 @@ Verification uses headless compilation, strict linting, nine logic/DOM tests and
 
 Live prototype: https://standard-metrics-review.vercel.app
 
+Public repository: https://github.com/davidflynt-lab/standard-metrics-review
+
+Production headless Chromium: both tests passed ([verification run](https://github.com/davidflynt-lab/standard-metrics-review/actions/runs/36502620954)).
+
 `npm run verify:live` loads live HTML and client bundles in JSDOM and checks the full correction flow plus safeguards. `npm run test:e2e` runs Playwright against a local production server; set `PROTOTYPE_URL` to run it against production. First install its browser with `npx playwright install chromium`. The GitHub verification workflow can be dispatched with the production URL.
 
 See `FINDINGS.md` for checked outcomes and limitations, and `interview-workspace/README.md` for four SVG frames and the native Figma import helper.

@@ -1,0 +1,28 @@
+{
+  "productionUrl": "https://standard-metrics-review.vercel.app",
+  "runUrl": "https://github.com/davidflynt-lab/standard-metrics-review/actions/runs/36502620954",
+  "result": "PASS",
+  "tests": [
+    {
+      "name": "golden path: queue \u2192 source \u2192 ARR correction \u2192 staged approval \u2192 undo",
+      "status": "passed",
+      "durationMs": 1058,
+      "errors": []
+    },
+    {
+      "name": "edge cases: selection excludes unresolved records; bulk approval; skip; rejection; reload",
+      "status": "passed",
+      "durationMs": 848,
+      "errors": []
+    }
+  ],
+  "screenshotsCaptured": false,
+  "videoCaptured": false,
+  "tracesCaptured": false,
+  "latencySampleMs": {
+    "queueLoadMs": 774,
+    "inspectionMs": 62,
+    "reclassificationMs": 20,
+    "stagingMs": 49
+  }
+}
